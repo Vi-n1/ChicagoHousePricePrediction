@@ -104,7 +104,9 @@ set.seed(1)
 
 model = randomForest(
   formula = Price ~ .,
-  data = train,  ntree=800,
+  data = train,
+  ntree=800,
+  nodesize = 3,
   keep.forest= TRUE, 
   random_state = 0,
   xtest = test[,1:2],
